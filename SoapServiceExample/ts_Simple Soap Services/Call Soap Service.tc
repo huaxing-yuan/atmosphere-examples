@@ -1,0 +1,182 @@
+﻿{
+  "TestSteps": [
+    {
+      "$type": "Atmosphere.Automation.TestSteps.SendRequestTestStep, Atmosphere.Automation",
+      "OperationId": "SQA.AT3.Hummingbird Airline.IBookingSystemContract.GetBookingInfoById",
+      "RequestOptions": {
+        "Credential": "Anonymous",
+        "UsePreemptiveAuthentication": false,
+        "NullQueryValue": false,
+        "EncodeQueryValue": true,
+        "UseMToM": false,
+        "AuthenticationMode": "Anonymous",
+        "SoapVersion": "Soap11",
+        "HttpHeaders": [],
+        "ProxyMode": "Auto",
+        "Boundary": "52a9a6fd-cfdc-47b4-acca-8452c8c30d72"
+      },
+      "RequestBase": {
+        "Metadata": {
+          "$type": "Atmosphere.Core.Services.Http.SoapRequestMetadata, Atmosphere.Core",
+          "SoapAction": "http://www.hummingbird-alm.com/example/airlines/BE/GetBookingInfoById",
+          "ReplyAction": "http://www.hummingbird-alm.com/example/airlines/BE/IBookingSystemContract/GetBookingInfoByIdResponse",
+          "SoapFaultTypes": [],
+          "SoapVersion": "Soap11",
+          "HttpMethod": "POST",
+          "HttpVersion": "Version11",
+          "ContentType": "text/xml; charset='utf-8'",
+          "Accept": "text/xml",
+          "ServiceId": "SQA.AT3.Hummingbird Airline.IBookingSystemContract",
+          "OperationId": "SQA.AT3.Hummingbird Airline.IBookingSystemContract.GetBookingInfoById",
+          "Application": "Hummingbird Airline",
+          "ServiceName": "IBookingSystemContract",
+          "CustomServiceName": "BookingSystem",
+          "OperationName": "GetBookingInfoById",
+          "UriTemplate": "https://hummingbirdalm.azurewebsites.net/airlines/BookingSystemService.svc"
+        },
+        "AuthenticationMode": "Anonymous",
+        "Url": "https://hummingbirdalm.azurewebsites.net/airlines/BookingSystemService.svc",
+        "RequestText": "POST / HTTP/1.1\r\nContent-Type: text/xml; charset=utf-8\r\nAccept: text/xml\r\nSOAPAction: \"http://www.hummingbird-alm.com/example/airlines/BE/GetBookingInfoById\"\r\n\r\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <s:Header />\r\n  <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <GetBookingInfoById xmlns=\"http://www.hummingbird-alm.com/example/airlines/BE\">\r\n      <requestId>3</requestId>\r\n    </GetBookingInfoById>\r\n  </s:Body>\r\n</s:Envelope>\r\n"
+      },
+      "MappingRules": [],
+      "Assertions": [
+        {
+          "$type": "Atmosphere.Automation.Assertions.ContainsAssertion, Atmosphere.Automation",
+          "CompareMode": "Binary",
+          "IsTargetPropertyUsed": true,
+          "IsComparedValueVisible": true,
+          "IsDisabled": false,
+          "ExpectedValue": "A098234514",
+          "ActualValue": "HTTP/1.1 200 OK\r\nDate: Sun, 18 Jun 2023 22:21:59 GMT\r\nServer: Microsoft-IIS/10.0\r\nSet-Cookie: ARRAffinity=4f13422a97254454968efd03569b51032f0c16bce4f71452a56fbdad384f2964;Path=/;HttpOnly;Secure;Domain=hummingbirdalm.azurewebsites.net; ARRAffinitySameSite=4f13422a97254454968efd03569b51032f0c16bce4f71452a56fbdad384f2964;Path=/;HttpOnly;SameSite=None;Secure;Domain=hummingbirdalm.azurewebsites.net\r\nVary: Accept-Encoding\r\nX-Powered-By: ASP.NET\r\nContent-Type: text/xml; charset=utf-8\r\n\r\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <s:Body>\r\n    <GetBookingInfoByIdResponse xmlns=\"http://www.hummingbird-alm.com/example/airlines/BE\">\r\n      <GetBookingInfoByIdResult xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n        <AirlineCode>CA</AirlineCode>\r\n        <AirlineName>Air China</AirlineName>\r\n        <ArrivalAirport>CDG</ArrivalAirport>\r\n        <ArrivalDateTime>2023-06-19T22:21:59.9351844+00:00</ArrivalDateTime>\r\n        <BookingId>3</BookingId>\r\n        <DepartureAirport>PEK</DepartureAirport>\r\n        <DepartureDateTime>2023-06-19T00:21:59.9351844+00:00</DepartureDateTime>\r\n        <FlightNumber>934</FlightNumber>\r\n        <Passenger>\r\n          <FirstName>John</FirstName>\r\n          <LastName>Doe</LastName>\r\n          <PNR_ID>a179afc4-f5e0-40d2-9ce5-08845777ac25</PNR_ID>\r\n          <Passport>A098234514</Passport>\r\n        </Passenger>\r\n        <Seat i:nil=\"true\" />\r\n      </GetBookingInfoByIdResult>\r\n    </GetBookingInfoByIdResponse>\r\n  </s:Body>\r\n</s:Envelope>\r\n",
+          "Name": "Contains Assertion - Check Passport ID",
+          "TargetProperty": "ResponseText",
+          "Information": "This assertion result is Success",
+          "Result": "Success",
+          "AvailableProperties": [
+            "OperationId",
+            "ResponseAsXml",
+            "RequestAsXml",
+            "ResponseAsJson",
+            "RequestAsJson",
+            "RequestText",
+            "ResponseText",
+            "WorkingDirectory",
+            "DiagnosticString",
+            "Status"
+          ]
+        },
+        {
+          "$type": "Atmosphere.Automation.Assertions.XPathAssertion, Atmosphere.Automation",
+          "CompareMode": "Binary",
+          "XPath": "namespace ha=\"http://www.hummingbird-alm.com/example/airlines/BE\"\r\n//ha:AirlineName/text()",
+          "IsTargetPropertyUsed": true,
+          "IsComparedValueVisible": true,
+          "IsDisabled": false,
+          "ExpectedValue": "Air China",
+          "ActualValue": "Air China",
+          "Name": "XPathAssertion - AirlineName",
+          "TargetProperty": "ResponseAsXml",
+          "Information": "This assertion result is Success",
+          "Result": "Success",
+          "AvailableProperties": [
+            "OperationId",
+            "ResponseAsXml",
+            "RequestAsXml",
+            "ResponseAsJson",
+            "RequestAsJson",
+            "RequestText",
+            "ResponseText",
+            "WorkingDirectory",
+            "DiagnosticString",
+            "Status"
+          ]
+        }
+      ],
+      "Report": {
+        "Type": "SendRequestTestStep",
+        "RequestText": "POST / HTTP/1.1\r\nContent-Type: text/xml; charset=utf-8\r\nAccept: text/xml\r\nSOAPAction: \"http://www.hummingbird-alm.com/example/airlines/BE/GetBookingInfoById\"\r\nx-Atmo-Request-Id: 638227237192968667\r\nx-Atmo-Operation-Id: SQA.AT3.Hummingbird Airline.IBookingSystemContract.GetBookingInfoById\r\n\r\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <s:Header />\r\n  <s:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <GetBookingInfoById xmlns=\"http://www.hummingbird-alm.com/example/airlines/BE\">\r\n      <requestId>3</requestId>\r\n    </GetBookingInfoById>\r\n  </s:Body>\r\n</s:Envelope>\r\n",
+        "RequestUri": "https://hummingbirdalm.azurewebsites.net/airlines/BookingSystemService.svc",
+        "ResponseText": "HTTP/1.1 200 OK\r\nDate: Sun, 18 Jun 2023 22:21:59 GMT\r\nServer: Microsoft-IIS/10.0\r\nSet-Cookie: ARRAffinity=4f13422a97254454968efd03569b51032f0c16bce4f71452a56fbdad384f2964;Path=/;HttpOnly;Secure;Domain=hummingbirdalm.azurewebsites.net; ARRAffinitySameSite=4f13422a97254454968efd03569b51032f0c16bce4f71452a56fbdad384f2964;Path=/;HttpOnly;SameSite=None;Secure;Domain=hummingbirdalm.azurewebsites.net\r\nVary: Accept-Encoding\r\nX-Powered-By: ASP.NET\r\nContent-Type: text/xml; charset=utf-8\r\n\r\n<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <s:Body>\r\n    <GetBookingInfoByIdResponse xmlns=\"http://www.hummingbird-alm.com/example/airlines/BE\">\r\n      <GetBookingInfoByIdResult xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n        <AirlineCode>CA</AirlineCode>\r\n        <AirlineName>Air China</AirlineName>\r\n        <ArrivalAirport>CDG</ArrivalAirport>\r\n        <ArrivalDateTime>2023-06-19T22:21:59.9351844+00:00</ArrivalDateTime>\r\n        <BookingId>3</BookingId>\r\n        <DepartureAirport>PEK</DepartureAirport>\r\n        <DepartureDateTime>2023-06-19T00:21:59.9351844+00:00</DepartureDateTime>\r\n        <FlightNumber>934</FlightNumber>\r\n        <Passenger>\r\n          <FirstName>John</FirstName>\r\n          <LastName>Doe</LastName>\r\n          <PNR_ID>a179afc4-f5e0-40d2-9ce5-08845777ac25</PNR_ID>\r\n          <Passport>A098234514</Passport>\r\n        </Passenger>\r\n        <Seat i:nil=\"true\" />\r\n      </GetBookingInfoByIdResult>\r\n    </GetBookingInfoByIdResponse>\r\n  </s:Body>\r\n</s:Envelope>\r\n",
+        "RepsonseTime": "00:00:00.1009946",
+        "OperationId": "IBookingSystemContract GetBookingInfoById",
+        "SubStepReport": [],
+        "IsVisible": true,
+        "Name": "Send Request",
+        "StartTime": "2023-06-19T00:21:59.2962882+02:00",
+        "EndTime": "2023-06-19T00:21:59.4084501+02:00",
+        "Result": "Success",
+        "Duration": "00:00:00.1121619",
+        "DurationString": "112 ms",
+        "TestParameters": [
+          {
+            "Name": "PROJECT_FILE",
+            "PersistedValue": "C:\\Users\\x_sli\\Documents\\GitHub\\atmosphere-examples\\SoapServiceExample\\SoapServiceExample.aprj",
+            "DefaultValue": "C:\\Users\\x_sli\\Documents\\GitHub\\atmosphere-examples\\SoapServiceExample\\SoapServiceExample.aprj",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          },
+          {
+            "Name": "PROJECT_PATH",
+            "PersistedValue": "C:\\Users\\x_sli\\Documents\\GitHub\\atmosphere-examples\\SoapServiceExample",
+            "DefaultValue": "C:\\Users\\x_sli\\Documents\\GitHub\\atmosphere-examples\\SoapServiceExample",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          },
+          {
+            "Name": "OS_PLATFORM",
+            "PersistedValue": "Win32NT",
+            "DefaultValue": "Win32NT",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          },
+          {
+            "Name": "OS_VERSION",
+            "PersistedValue": "Microsoft Windows NT 10.0.22621.0",
+            "DefaultValue": "Microsoft Windows NT 10.0.22621.0",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          },
+          {
+            "Name": "PROCESSOR_COUNT",
+            "PersistedValue": "16",
+            "DefaultValue": "16",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          },
+          {
+            "Name": "TEMP_PATH",
+            "PersistedValue": "C:\\Users\\x_sli\\AppData\\Local\\Temp\\",
+            "DefaultValue": "C:\\Users\\x_sli\\AppData\\Local\\Temp\\",
+            "IsReadOnly": false,
+            "VariableType": "Text"
+          }
+        ],
+        "Information": "",
+        "Diagnostics": "Send request to: https://hummingbirdalm.azurewebsites.net/airlines/BookingSystemService.svc\nRun assertion 'Contains Assertion - Check Passport ID', Result: Success \nExpected Value: A098234514\r\n\nRun assertion 'XPathAssertion - AirlineName', Result: Success \nExpected Value: Air China\r\nActual Value: Air China\r\nXPath: namespace ha=\"http://www.hummingbird-alm.com/example/airlines/BE\"\r\n//ha:AirlineName/text()\r\n",
+        "Description": ""
+      },
+      "Information": "",
+      "Id": "02b742b5-fb38-4dda-a6e7-a6e9c8205a7b",
+      "Name": "Send Request",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    }
+  ],
+  "ErrorBehavior": "StopTestCase",
+  "AvailableErrorBehaviors": {
+    "$type": "Atmosphere.Automation.TestErrorBehavior[], Atmosphere.Automation",
+    "$values": [
+      "RunNextStep",
+      "StopTestCase"
+    ]
+  },
+  "FileName": "ts_Simple Soap Services\\Call Soap Service.tc",
+  "IsExpanded": true,
+  "Information": "",
+  "Id": "188e5ef0-e806-4c56-be25-8937a9282963",
+  "Name": "Call Soap Service",
+  "Description": "",
+  "IsEnabled": true,
+  "LocalVariables": []
+}

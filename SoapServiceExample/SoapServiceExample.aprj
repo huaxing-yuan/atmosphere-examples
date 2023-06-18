@@ -1,0 +1,117 @@
+{
+  "AutomationSettings": {
+    "EmbeddedExtensionBehavior": "SameVersion"
+  },
+  "TypeId": "15f54a55fdb84f489ee418e6cf19dac7a157417924ef47099fd008bf25bf2c50",
+  "SubItems": [
+    {
+      "$type": "Atmosphere.Automation.ProjectResourceFiles, Atmosphere.Automation",
+      "IsExpanded": false,
+      "Files": []
+    },
+    {
+      "$type": "Atmosphere.Automation.ReusableActions, Atmosphere.Automation",
+      "Actions": [],
+      "TestCasesOrder": [],
+      "ErrorBehavior": "RunNextTestCase",
+      "AvailableErrorBehaviors": {
+        "$type": "Atmosphere.Automation.TestSuiteErrorBehavior[], Atmosphere.Automation",
+        "$values": [
+          "RunNextTestCase",
+          "StopTestSuite"
+        ]
+      },
+      "IsExpanded": false,
+      "Information": "",
+      "Id": "7ff1c497-be48-460e-81b9-4c6751b6a2d7",
+      "Name": "",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    },
+    {
+      "$type": "Atmosphere.Automation.TestSuite, Atmosphere.Automation",
+      "FileName": "ts_Simple Soap Services\\Simple Soap Services.ts",
+      "TestCasesOrder": [
+        {
+          "Key": "188e5ef0-e806-4c56-be25-8937a9282963",
+          "Value": "ts_Simple Soap Services\\Call Soap Service.tc"
+        }
+      ],
+      "ErrorBehavior": "RunNextTestCase",
+      "AvailableErrorBehaviors": {
+        "$type": "Atmosphere.Automation.TestSuiteErrorBehavior[], Atmosphere.Automation",
+        "$values": [
+          "RunNextTestCase",
+          "StopTestSuite"
+        ]
+      },
+      "IsExpanded": true,
+      "Information": "",
+      "Id": "c13ed80f-4261-4f8c-b0b0-4e073e3232d3",
+      "Name": "Simple Soap Services",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    }
+  ],
+  "Files": {
+    "IsExpanded": false,
+    "Files": []
+  },
+  "EmbeddedExtensions": [
+    {
+      "Content": "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",
+      "Name": "Atmo-Hummingbird Airline-BookingSystem",
+      "Description": "Me Description",
+      "Developer": "Atmosphere",
+      "AboutUrl": "https://www.about.com",
+      "LicenseFile": "license.txt",
+      "Version": "1.0",
+      "Type": "ServiceDefinition",
+      "Files": [
+        "Devname-svc-BookingSystem-1.0.dll"
+      ],
+      "AssemblyFiles": [
+        "Devname-svc-BookingSystem-1.0.dll"
+      ],
+      "MinFrameworkVersion": "1.0",
+      "MaxFrameworkVersion": "2.0",
+      "SupportedFrameworkRange": "1.0 - 2.0"
+    }
+  ],
+  "TestSuiteOrder": [
+    {
+      "Key": "c13ed80f-4261-4f8c-b0b0-4e073e3232d3",
+      "Value": "ts_Simple Soap Services\\Simple Soap Services.ts"
+    }
+  ],
+  "SharedActionOrder": [],
+  "Version": "1.0",
+  "FrameworkVersion": "1.0.0.0",
+  "CreatedBy": "x_sli",
+  "LoadedFromDirectory": "C:\\Users\\x_sli\\Documents\\GitHub\\atmosphere-examples\\SoapServiceExample",
+  "TestEnvironments": {
+    "Environments": [
+      {
+        "Name": "Default",
+        "Id": "00000000-0000-0000-0000-000000000000",
+        "ServiceEndpoints": [
+          {
+            "Name": "SQA.AT3.Hummingbird Airline.IBookingSystemContract",
+            "Value": "https://hummingbirdalm.azurewebsites.net/airlines/BookingSystemService.svc"
+          }
+        ],
+        "UserDefiniedCredentials": [],
+        "Variables": []
+      }
+    ]
+  },
+  "UseSystemEnvironmentVariables": false,
+  "Information": "",
+  "Id": "a8c3a69f-d9ce-4dba-8a85-37a3dddd98ff",
+  "Name": "SoapServiceExample",
+  "Description": "",
+  "IsEnabled": true,
+  "LocalVariables": []
+}
