@@ -1,2 +1,2 @@
 # atmosphere-examples
-Examples of Automation Projects using Atmosphere Studio
+This repo is used to test git related command via Aethrix Studio for automation projects
