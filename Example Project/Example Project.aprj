@@ -1,0 +1,81 @@
+﻿{
+  "AutomationSettings": {
+    "EmbeddedExtensionBehavior": "SameVersion"
+  },
+  "TypeId": "CQ2N3BrMYQsZ/yDr+hGDE78lRdDzNooTnkWfh/SWmN+YpCOSx2QQeI2ib0VetLGfuMGDQ66igAG8gTAtholO2Tc4OjukEGl5P3hmLDII77gl9kgiFv8nGAtbVRqpdt2lCJu7q0BXFNa9YzNpNercQGF/S0lhXCTQgxUcncCzRh/pUEVJUnUVsJUaSDzmKbaQ",
+  "IV": "/vmJ+xxP9TmnhqnV",
+  "Extensions": [
+    {
+      "Name": "svc-Hummingbird Airline-Middleware-1.0",
+      "Value": "extensions/svc-svc-Hummingbird-Airline-Middleware-v1.0"
+    }
+  ],
+  "ExtensionReferences": [
+    {
+      "Id": "SQA.AT4",
+      "Name": "svc-Hummingbird Airline-Middleware",
+      "MinVersion": "1.0",
+      "Source": "LocalAPIImport"
+    }
+  ],
+  "TestSuiteOrder": [
+    {
+      "Name": "5811b3d2-7596-48b0-bbc7-d7c58db3a778",
+      "Value": "ts_Flight Registration/Flight Registration.ts"
+    }
+  ],
+  "SharedActionOrder": [],
+  "TestDesignConfigs": [],
+  "Version": "1.0",
+  "FrameworkVersion": "1.0.0.0",
+  "CreatedBy": "x_sli",
+  "LoadedFromDirectory": "D:\\temp\\aprj-example\\Example Project",
+  "TestEnvironments": {
+    "Environments": [
+      {
+        "Name": "Default",
+        "Id": "00000000-0000-0000-0000-000000000000",
+        "ServiceEndpoints": [
+          {
+            "Name": "SQA.AT4.Hummingbird Airline.IEaiIntegrationServices",
+            "Value": "https://hummingbirdalm.azurewebsites.net/airlines/EAIService.svc",
+            "IsReadOnly": false
+          }
+        ],
+        "UserDefinedCredentials": [],
+        "EnvironmentColor": "#1E90FF",
+        "Variables": []
+      }
+    ]
+  },
+  "UseSystemEnvironmentVariables": false,
+  "Files": {
+    "IsExpanded": false,
+    "Files": []
+  },
+  "CodeFiles": [],
+  "ConnectionProfiles": [],
+  "SubItems": [
+    {
+      "$type": "Aethrix.Automation.TestSuite, Aethrix.Automation",
+      "TestCasesOrder": [
+        {
+          "Name": "226ffca4-93b0-4f11-8702-4b75f5d24f04",
+          "Value": "ts_Flight Registration/Register Flight.tc"
+        }
+      ],
+      "ErrorBehavior": "RunNextTestCase",
+      "IsExpanded": true,
+      "Id": "5811b3d2-7596-48b0-bbc7-d7c58db3a778",
+      "Name": "Flight Registration",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    }
+  ],
+  "Id": "85b87023-0602-4bb7-addb-1ce36dafa127",
+  "Name": "Example Project",
+  "Description": "",
+  "IsEnabled": true,
+  "LocalVariables": []
+}

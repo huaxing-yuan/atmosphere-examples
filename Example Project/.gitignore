@@ -1,0 +1,16 @@
+﻿# Aethrix Studio automation project
+
+# Test execution reports
+*.report
+reports/
+
+# Last-run status and diagnostics (runtime data, not part of project)
+.results/
+
+# Temporary and backup files
+*.tmp
+*.bak
+
+# Build outputs
+bin/
+obj/

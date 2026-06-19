@@ -1,0 +1,54 @@
+﻿POST / HTTP/1.1
+Content-Type: text/xml; charset=utf-8
+Accept: text/xml
+SOAPAction: "http://www.hummingbird-alm.com/example/airlines/ME/Registration"
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header />
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Registration xmlns="http://www.hummingbird-alm.com/example/airlines/ME">
+      <request>
+        <BookingInformation>
+          <AirlineCode xmlns="http://www.hummingbird-alm.com/example/airlines/BE">HA</AirlineCode>
+          <AirlineName xmlns="http://www.hummingbird-alm.com/example/airlines/BE">Hummingbird Airline</AirlineName>
+          <ArrivalAirport xmlns="http://www.hummingbird-alm.com/example/airlines/BE">JFK</ArrivalAirport>
+          <ArrivalDateTime xmlns="http://www.hummingbird-alm.com/example/airlines/BE">2026-06-20T14:30:00</ArrivalDateTime>
+          <BookingId xmlns="http://www.hummingbird-alm.com/example/airlines/BE">HB-20260618-001</BookingId>
+          <DepartureAirport xmlns="http://www.hummingbird-alm.com/example/airlines/BE">LHR</DepartureAirport>
+          <DepartureDateTime xmlns="http://www.hummingbird-alm.com/example/airlines/BE">2026-06-20T10:00:00</DepartureDateTime>
+          <FlightNumber xmlns="http://www.hummingbird-alm.com/example/airlines/BE">1234</FlightNumber>
+          <Passenger xmlns="http://www.hummingbird-alm.com/example/airlines/BE">
+            <FirstName>John</FirstName>
+            <LastName>Doe</LastName>
+            <PNR_ID>ABC123</PNR_ID>
+            <Passport>AB123456</Passport>
+          </Passenger>
+          <Seat xmlns="http://www.hummingbird-alm.com/example/airlines/BE">
+            <Class>ECONOMY_CLASS</Class>
+            <SeatNumber>14B</SeatNumber>
+          </Seat>
+        </BookingInformation>
+        <Luggages>
+          <AbstractLuggage xsi:type="CarryOnLuggage" xmlns="http://www.hummingbird-alm.com/example/airlines/BE">
+            <ID xsi:nil="true" />
+            <OwnerID xsi:nil="true" />
+            <Size>M</Size>
+            <Weight>7</Weight>
+            <IsVerified>true</IsVerified>
+          </AbstractLuggage>
+          <AbstractLuggage xsi:type="WheeledLuggage" xmlns="http://www.hummingbird-alm.com/example/airlines/BE">
+            <ID xsi:nil="true" />
+            <OwnerID xsi:nil="true" />
+            <Size>XL</Size>
+            <Weight>23</Weight>
+            <TargetId xsi:nil="true" />
+          </AbstractLuggage>
+        </Luggages>
+        <SeatRequest>
+          <Class xmlns="http://www.hummingbird-alm.com/example/airlines/BE">FIRST_CLASS</Class>
+          <SeatNumber xmlns="http://www.hummingbird-alm.com/example/airlines/BE">12A</SeatNumber>
+        </SeatRequest>
+      </request>
+    </Registration>
+  </s:Body>
+</s:Envelope>

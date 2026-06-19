@@ -1,0 +1,38 @@
+﻿{
+  "TestSteps": [
+    {
+      "$type": "Aethrix.Automation.TestSteps.SendRequestTestStep, Aethrix.Automation",
+      "OperationId": "SQA.AT4.Hummingbird Airline.IEaiIntegrationServices.Registration",
+      "RequestOptions": {"Headers":[]},
+      "RequestBase": {
+        "Metadata": {
+          "ServiceId": "SQA.AT4.Hummingbird Airline.IEaiIntegrationServices",
+          "OperationId": "SQA.AT4.Hummingbird Airline.IEaiIntegrationServices.Registration",
+          "ApplicationName": "Hummingbird Airline",
+          "ServiceName": "IEaiIntegrationServices",
+          "CustomServiceName": "Middleware",
+          "OperationName": "Registration"
+        },
+        "AuthenticationMode": "Anonymous",
+        "Url": "https://hummingbirdalm.azurewebsites.net/airlines/EAIService.svc",
+        "HasDeserializationError": false,
+        "IsStreamComplete": false
+      },
+      "MappingRules": [],
+      "Assertions": [],
+      "Id": "06714a2e-e304-4c5b-93a1-df590b7963f7",
+      "Name": "Submit Registration",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    }
+  ],
+  "ErrorBehavior": "StopTestCase",
+  "IsExpanded": true,
+  "IsUIAutomationEnabled": false,
+  "Id": "226ffca4-93b0-4f11-8702-4b75f5d24f04",
+  "Name": "Register Flight",
+  "Description": "",
+  "IsEnabled": true,
+  "LocalVariables": []
+}
