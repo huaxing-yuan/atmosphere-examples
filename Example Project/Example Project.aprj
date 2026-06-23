@@ -2,8 +2,8 @@
   "AutomationSettings": {
     "EmbeddedExtensionBehavior": "SameVersion"
   },
-  "TypeId": "SirSmcuGKGxqjGIosYHvdR45ZBfKS5ziZLuaKkomdPmsOi81IrL8kK1n7PTLvcbcq05uCf8heRsGmiDPEoKlW1bj3CYa/tXQDU8SbHTil9Oi/2PZW//7uVOD5W5CP6esBdebIr8LCK2ISI51ZpDC1agO8oAQRLcAlrH1tm5lJjCAw484XfQyJuD5u90YAkAB",
-  "IV": "ctfK8uwenzTomvlw",
+  "TypeId": "Ybcjfd1sJpRlGvDJw3rNkvtb2xxYW4qJG4mVT3+J6AQeUDc63eLn0r4EieqmOdf8oeklIbpn0HH/zsR5A3Yc5M57qUxYkBo384lInRzGsV8tsPsJVWXXYmtIWlf4o7kKuzONq7I4SHRcypD7aUXafV3gTyGqAwFAhL7agr98WoBxDV7O0GTMUEkgu/W7MxrW",
+  "IV": "aOsayKtiD8DRYBpv",
   "Extensions": [
     {
       "Name": "svc-Hummingbird Airline-Middleware-1.0",
@@ -34,6 +34,10 @@
     {
       "Name": "c558e3e6-84b2-495d-ae8f-8ca35884ce82",
       "Value": "ts_Test Suite 3/Test Suite 3.ts"
+    },
+    {
+      "Name": "d0dee5a5-1d9e-4323-8ba2-fb830652eae2",
+      "Value": "ts_Test Suite 4/Test Suite 4.ts"
     }
   ],
   "SharedActionOrder": [],
@@ -118,6 +122,17 @@
       "IsExpanded": false,
       "Id": "c558e3e6-84b2-495d-ae8f-8ca35884ce82",
       "Name": "Test Suite 3",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    },
+    {
+      "$type": "Aethrix.Automation.TestSuite, Aethrix.Automation",
+      "TestCasesOrder": [],
+      "ErrorBehavior": "RunNextTestCase",
+      "IsExpanded": false,
+      "Id": "d0dee5a5-1d9e-4323-8ba2-fb830652eae2",
+      "Name": "Test Suite 4",
       "Description": "",
       "IsEnabled": true,
       "LocalVariables": []
