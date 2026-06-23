@@ -1,0 +1,11 @@
+﻿{
+  "TestSteps": [],
+  "ErrorBehavior": "StopTestCase",
+  "IsExpanded": false,
+  "IsUIAutomationEnabled": false,
+  "Id": "339bc4a4-e9f8-43f9-844f-e0800a1dd257",
+  "Name": "My Case 1",
+  "Description": "",
+  "IsEnabled": true,
+  "LocalVariables": []
+}

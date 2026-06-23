@@ -2,8 +2,8 @@
   "AutomationSettings": {
     "EmbeddedExtensionBehavior": "SameVersion"
   },
-  "TypeId": "FmTeCf3LnJFdaWJClzPcAmDzvro2HffjUUdOPFzOIhx9QNhXG1LEB9pH2cTyxxfblewLDDieoSm72rklbFQcKQ4kCfpO2DfhUG87/GHea4i6aCoEFZngMXN6wX20g6nwfD3QWTVTlMjM2bcqFg23i96GE9ewACHacT5WioDtk3YkoHW/f1BlV1vJ+rjO1rm9",
-  "IV": "uOi2RmUkCc5LtZSl",
+  "TypeId": "aWDKl/FM9RX6ch3QKJ91coPsH0iUFn31D4U4MkJnZxVVxGYVEqnU8mbnKarkeL44HBoTMrOgmJo05MY6KA51BoT26DwQ+94VPY/EsXfyztLVPTZa4eqe9ZoXEwd6inPlrfcPDRarNRqo/oY4OU4frOFd197j18Suxv7RO3huQUCv/80v/2MJ084AD+TKvWs/",
+  "IV": "3ct7Vol1Dzkhi5Hm",
   "Extensions": [
     {
       "Name": "svc-Hummingbird Airline-Middleware-1.0",
@@ -22,6 +22,10 @@
     {
       "Name": "5811b3d2-7596-48b0-bbc7-d7c58db3a778",
       "Value": "ts_Flight Registration/Flight Registration.ts"
+    },
+    {
+      "Name": "9daee765-9e7e-4d5a-b486-5538323c91cf",
+      "Value": "ts_Test Suite 1/Test Suite 1.ts"
     }
   ],
   "SharedActionOrder": [],
@@ -68,6 +72,22 @@
       "IsExpanded": true,
       "Id": "5811b3d2-7596-48b0-bbc7-d7c58db3a778",
       "Name": "Flight Registration",
+      "Description": "",
+      "IsEnabled": true,
+      "LocalVariables": []
+    },
+    {
+      "$type": "Aethrix.Automation.TestSuite, Aethrix.Automation",
+      "TestCasesOrder": [
+        {
+          "Name": "339bc4a4-e9f8-43f9-844f-e0800a1dd257",
+          "Value": "ts_Test Suite 1/My Case 1.tc"
+        }
+      ],
+      "ErrorBehavior": "RunNextTestCase",
+      "IsExpanded": true,
+      "Id": "9daee765-9e7e-4d5a-b486-5538323c91cf",
+      "Name": "Test Suite 1",
       "Description": "",
       "IsEnabled": true,
       "LocalVariables": []
